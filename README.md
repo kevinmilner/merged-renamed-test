@@ -10,21 +10,13 @@ git merge --allow-unrelated-histories commons/2020_05-initial-merge-test
 git merge --allow-unrelated-histories core/2020_05-initial-merge-test
 ```
 
-Then I redid the directory structure with:
+Then I redid the directory structure retaining history using [this tool](https://gist.github.com/emiller/6769886):
 
 ```
-kevin@steel:~/git/merge_tests/merged-test$ cd src/
-kevin@steel:~/git/merge_tests/merged-test/src$ mkdir main
-kevin@steel:~/git/merge_tests/merged-test/src$ mkdir main/java
-kevin@steel:~/git/merge_tests/merged-test/src$ git mv org/ main/java/
-kevin@steel:~/git/merge_tests/merged-test/src$ git mv scratch/ main/java/
-kevin@steel:~/git/merge_tests/merged-test/src$ git mv resources/ main/
-kevin@steel:~/git/merge_tests/merged-test/src$ git mv ../test/ .
-
-
-kevin@steel:~/git/merge_tests/merged-renamed-test$ mkdir src/main
-kevin@steel:~/git/merge_tests/merged-renamed-test$ mkdir src/main/java
-kevin@steel:~/git/merge_tests/merged-renamed-test$ ./git-rewrite-history src/org=src/main/java/org
-
+./git-rewrite-history src/org=src/main/java/org
+./git-rewrite-history src/scratch=src/main/java/scratch
+./git-rewrite-history src/resources=src/main/resources
+./git-rewrite-history test=src/test
+git push -f
 ```
 
