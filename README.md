@@ -30,3 +30,5 @@ cp ~/workspace/opensha-commons/./gradlew* .
 cp -r ~/workspace/opensha-commons/gradle .
 ./gradlew wrapper --gradle-version=7.0.1 --distribution-type=bin
 ```
+
+NOTE: Gradle 7 changes a few things, so I had to change the 'testCompile' to 'testImplementation' and in the common settings file, change 'compile' to 'implementation' in the section that extends compileAndResource.

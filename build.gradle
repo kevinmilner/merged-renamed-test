@@ -40,5 +40,5 @@ dependencies {
     compileAndResource files('lib/sdoapi.jar')
     compileAndResource files('lib/EventWebService.jar')
 
-    testCompile 'junit:junit:4.12'
+    testCompileOnly 'junit:junit:4.12'
 }

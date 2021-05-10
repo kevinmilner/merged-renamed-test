@@ -4,7 +4,8 @@
  */
 apply plugin: 'java'
 
-sourceCompatibility = 11
+sourceCompatibility = JavaVersion.VERSION_11
+compileJava.options.encoding = "UTF-8"
 
 repositories {
     jcenter()
@@ -16,7 +17,7 @@ configurations {
         transitive = true
     }
     
-    compile {
+    implementation {
         description 'compile classpath'
         transitive = true
         extendsFrom compileAndResource
