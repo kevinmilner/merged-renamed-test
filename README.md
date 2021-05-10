@@ -23,3 +23,10 @@ Then I redid the directory structure retaining history using [this tool](https:/
 git push -f
 ```
 
+Then I updated added/updated the gradle wrapper with:
+
+```
+cp ~/workspace/opensha-commons/./gradlew* .
+cp -r ~/workspace/opensha-commons/gradle .
+./gradlew wrapper --gradle-version=7.0.1 --distribution-type=bin
+```
