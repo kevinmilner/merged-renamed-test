@@ -8,6 +8,9 @@ git remote add -f core git@github.com:opensha/opensha-core.git
 
 git merge --allow-unrelated-histories commons/2020_05-initial-merge-test
 git merge --allow-unrelated-histories core/2020_05-initial-merge-test
+
+git remote rm commons
+git remote rm core
 ```
 
 Then I redid the directory structure retaining history using [this tool](https://gist.github.com/emiller/6769886):
